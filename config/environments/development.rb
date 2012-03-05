@@ -36,5 +36,5 @@ SampleApp::Application.configure do
   config.assets.debug = false
 
   # Disabeling the assets:
-  config.assets.enabled = false
+  config.assets.enabled = true
 end
