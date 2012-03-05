@@ -1,11 +1,12 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/help"
-
-  get "static_pages/home"
-
-  get "static_pages/about"
-
-  get "static_pages/contact"
+  #get "static_pages/home"
+  root :to => 'welcome#index'
+  #get "static_pages/help"
+  match '/help', to: 'static_pages#help'
+  #get "static_pages/about"
+  match '/about', to: 'static_pages#about'
+  #get "static_pages/contact"
+  match '/contact', to: 'static_pages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -17,6 +18,7 @@ SampleApp::Application.routes.draw do
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
+  #root :to => "static_pages#home"
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
